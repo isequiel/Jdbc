@@ -35,11 +35,14 @@ public class AtualizarMarca extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setMinimumSize(new java.awt.Dimension(500, 350));
         getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jLabel1.setText("Atualizar Marca");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(66, 28, 74, 14);
+        jLabel1.setBounds(160, 30, 150, 17);
 
         jLabel2.setText("Id:");
         getContentPane().add(jLabel2);
@@ -47,16 +50,18 @@ public class AtualizarMarca extends javax.swing.JFrame {
 
         jLabel3.setText("Nome:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 140, 31, 14);
+        jLabel3.setBounds(20, 140, 40, 14);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(50, 80, 230, 30);
+        jTextField1.setBounds(60, 90, 230, 30);
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(50, 130, 230, 30);
+        jTextField2.setBounds(60, 130, 230, 30);
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButton1.setText("Limpar");
         getContentPane().add(jButton1);
         jButton1.setBounds(270, 250, 73, 23);
 
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButton2.setText("Salvar");
         getContentPane().add(jButton2);
         jButton2.setBounds(350, 250, 63, 23);
