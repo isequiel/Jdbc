@@ -154,5 +154,29 @@ public class MarcaDAOJDBC implements MarcaDAO{
       } 
         return marca;
     }   
+
+    public Marca getMarcaByNome(String nome) {
+       Connection conn = null;
+         PreparedStatement pstm = null;
+         ResultSet rs = null;
+         ArrayList<Marca> marcas = new ArrayList<Marca>();
+         Marca marca = new Marca();
+      try{
+          conn = FabricaConexao.getConnection();
+          pstm = conn.prepareStatement(LISTBYNOME);
+          pstm.setString(1, nome);
+          rs = pstm.executeQuery();
+          
+          while (rs.next()){
+             
+              marca.setId(rs.getInt("Id"));
+              marca.setNome(rs.getString("nome"));
+              marcas.add(marca);
+          }
+      }catch (Exception e){
+          JOptionPane.showMessageDialog(null, "Erro ao listar as marca: " + e.getMessage());
+      } 
+        return marca; 
+    }
 }
 
