@@ -19,7 +19,7 @@ public class MarcaController {
      */
     public void inserir (Marca m){
         MarcaDAO md = new MarcaDAOJDBC();
-        md.atualizar(m);
+        md.inserir(m);
     }
     /*
      * 
@@ -27,6 +27,10 @@ public class MarcaController {
     public void excluir(int id){
         MarcaDAO md = new MarcaDAOJDBC();
         md.excluir(id);
+    }
+    public void atualizar(Marca m){
+         MarcaDAO md = new MarcaDAOJDBC();
+         md.atualizar(m);
     }
     /*
      * 
@@ -48,6 +52,13 @@ public class MarcaController {
     public Marca getMarcaById(int id){
       MarcaDAO md = new MarcaDAOJDBC(); 
       return md.getMarcasById(id);   
+    } 
+    /*
+     * 
+     */
+     public Marca getMarcByNome(String nome){
+      MarcaDAO md = new MarcaDAOJDBC(); 
+      return md.getMarcaByNome(nome);   
     } 
 }
 
